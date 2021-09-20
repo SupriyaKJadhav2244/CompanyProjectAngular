@@ -1,0 +1,7 @@
+table,th,td{
+    text-align: center;
+}
+.testAlignCenter{
+    text-align: center;
+    margin: 20px auto;
+}

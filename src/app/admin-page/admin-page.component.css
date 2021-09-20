@@ -1,0 +1,34 @@
+#logButton{
+    /* margin-left: 200px; */
+    margin-top: 20px;
+    width: 150px;
+    border: none;
+    border-radius: 20px;
+}
+#logButton:hover{
+    /* margin-left: 200px; */
+    margin-top: 20px;
+    width: 150px;
+    border: none;
+    border-radius: 20px;
+    background-color: red;
+}
+.titlebox{ 
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    /* width: 600px; */
+}
+.logform{
+    /* width: 600px; */
+    border: 1px solid black;
+    padding: 20px;
+}
+h2 {
+    color: rgb(253, 253, 253);
+}
+input.ng-invalid.ng-touched{
+    border-color: red;
+}

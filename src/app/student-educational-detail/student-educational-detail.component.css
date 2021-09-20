@@ -1,0 +1,29 @@
+.title{
+    font-size: 30px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    margin: 20px auto;
+} 
+.feildRow{
+    margin: 20px;
+}
+.uButton{
+    display:block;
+    margin: 20px auto; 
+}
+#sbutton{ 
+    /* margin: 20px auto; */
+    /* margin-left: 250px; */
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+}
+#sbutton:hover{
+    /* margin: 20px auto; */
+    /* margin-left: 500px; */
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    background-color: red;
+}

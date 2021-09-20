@@ -1,0 +1,107 @@
+body{
+    background-color: #b5b5b5;
+    font-family: 'Roboto', sans-serif;
+}
+.contact{
+    margin: 24px;
+    margin-top: 10px;
+    box-shadow:0px 1px 1px 1px rgba(114, 114, 114, 0.56); 
+    background-color:#ffffff;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+.first{
+    margin-top: 150px;
+}
+.innerdata p{
+    margin: 20px;
+}
+.contact p{
+  font-size: 18px;
+  padding: 10px;
+  text-align: justify;
+}
+.form-control{
+  font-size: 20px;
+  padding: 20px 0px;
+  font-weight: 100;
+}
+.contact h4{
+    text-align: center;
+}
+.innerdata{
+    padding: 12px;
+}
+#one{
+     background-color: #03A9F4;
+}
+#two{
+    background-color: #3F51B5;
+}
+.divheight{
+    height: 70%;
+}
+
+.contact_label{
+  font-size: 20px;
+  margin: 22px;
+  color: white;
+  padding: 20px 0px;
+  font-weight: 100;
+}
+
+.contact_form{
+    margin: 5px;
+    padding: 8px;
+/*    background-color:#3F51B5;*/
+/*    border-radius: 20px;*/
+    box-shadow:0px 1px 1px 1px rgba(255, 255, 255, 0.56);
+}
+.button{
+    padding: 10px;
+    margin: 10px;
+    font-size:18px;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #3F51B5;
+    border: 1px solid #3F51B5 ;
+    border-radius: 20px;
+}
+.button:hover{
+     box-shadow:0px 1px 1px 1px rgba(0, 0, 0, 0.26);
+}
+.contact .form-control:hover,
+.contact .form-control:active,
+.contact .form-control:focus{
+    background-color: #3F51B5;
+    color: rgba(0, 0, 0, 0.87);
+    border: 1px solid rgba(0, 0, 0, 0.57);
+}
+.fileuploads{
+    font-size: 20px;
+    padding: 10px 10px;
+    font-weight: 100;
+}
+.contact .fileuploads:hover,
+.contact .fileuploads:active,
+.contact .fileuploads:focus{
+    background-color: #3F51B5;
+    color: rgba(0, 0, 0, 0.87);
+    border: 1px solid rgba(0, 0, 0, 0.57);
+}
+.text{
+    color: #c7534b;
+}
+@media(min-width:992px){
+.contact{
+    margin: 20px auto;
+    margin-top: 20px;
+}
+.first{
+    margin-top: 150px;
+}
+.contact_form{
+    margin: 24px;
+    padding: 14px;
+    box-shadow:0px 1px 1px 1px rgba(255, 255, 255, 0.56);
+}
+}

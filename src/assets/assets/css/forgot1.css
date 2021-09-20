@@ -1,0 +1,18 @@
+
+.divblock{
+    margin: 25px 10px;
+    text-align: center;
+}
+.divblock h3{
+    padding: 25px 0px;
+}
+.divblock p{
+    padding: 15px;
+}
+.divblock a{
+    margin: 10px;
+}
+.center-div{
+    width: 400px;
+    height: 150px;
+}

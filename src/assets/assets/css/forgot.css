@@ -1,0 +1,76 @@
+*{
+/*    border: 1px solid green;*/
+}
+
+.center-div{
+    margin: 70px auto 0px;
+    width: 350px;
+    height: 400px;
+    box-shadow: 1px 1px 2px 2px #939393;
+}
+.logincontains{
+    padding: 0px 20px;
+    width: 350px;
+    height: 200px;
+}
+.tab{
+    padding-left: 45%;
+    border: 0px;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+.nav-tabs{
+    border: 0px;
+}
+.logincontains h3{
+    padding: 10px 0px 20px 0px;
+    color:  #eb4919;
+}  
+#user,#broker,#owner{
+     text-align: center;
+}
+/*
+#broker{
+	text-align: center;
+}
+*/
+.text{
+    margin: 25px auto;
+    background-color: rgba(255, 255, 255, 0.50);
+    border:0px; 
+    font-size: 14px;
+/*    color: #eb4919;*/
+}
+.button{
+     margin: 25px auto;
+     background-color: transparent;
+    border:0px; 
+}
+.button:hover{
+    background-color: #d90a0a;
+    color: white;
+}
+.tablediv{
+    margin: 20px auto;
+    padding: 5px 35px 0px 0px;
+    width: 480px;
+    height: 300px;
+}
+
+#owner h3{
+     text-align: center;
+}
+.single{
+    padding: 5px 30px;
+    box-shadow: 1px 1px 1px 1px #d3d3d3;
+    background-color: transparent;
+    margin: 5px auto;
+}
+@media(min-width:600px){
+    .center-div{
+    width: 450px;
+}
+    .logincontains{
+    width: 450px;
+}
+}

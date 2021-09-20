@@ -1,0 +1,37 @@
+.logform{
+    /* width: 800px; */
+    border: 1px solid black;
+    padding: 20px;
+}
+.titlebox{
+    background-color: darkblue;
+    color: white!important;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+}
+#logButton{
+    /* margin-left: 320px; */
+    margin-top: 20px;
+    width: 150px;
+    border: none;
+    border-radius: 20px;
+}
+#logButton:hover{
+    /* margin-left: 320px; */
+    margin-top: 20px;
+    width: 150px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(241, 235, 235);
+}
+.regiLink{
+    text-align: center;
+    padding: 10px; 
+}
+h2 {
+    color: #fcf8e3!important;
+}
+input.ng-invalid.ng-touched{
+    border-color: red;
+}

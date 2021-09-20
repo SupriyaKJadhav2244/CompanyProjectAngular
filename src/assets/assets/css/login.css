@@ -1,0 +1,63 @@
+*{
+/*    border:1px solid pink;*/
+}
+.im{
+/*    background: url("777.jpg") no-repeat;*/
+/*    width: 400px;*/
+     background-size:cover;
+}
+.logincontains{
+    padding: 0px 20px;
+    margin: 40px auto;
+    text-align: center;
+    width: 320px;
+    height: 350px;
+    box-shadow: 2px 3px 5px black;
+    background: url("../css/aaaaa.jpg");
+    background-size: cover;
+}
+.logincontains h3{
+    padding: 30px 0px 0px 0px;     color: rgb(253, 43, 4);
+}   
+
+.text{
+    margin: 25px auto;
+    background-color: rgba(206, 206, 206, 0.5);
+    border:0px; 
+    font-size: 14px;
+}
+.button{
+     margin: 25px auto;
+     background-color: transparent;
+     border:0px; 
+}
+.button:hover{
+    background-color: rgb(253, 43, 4);
+    color: white;
+}
+
+.t1{
+/*     background-color: rgb(248, 61, 4);*/
+    color: blue;
+     font-size: 16px;
+}
+.t1:focus{
+/*     background-color: rgb(248, 61, 4);*/
+     color: blue;
+     font-size: 16px;
+}
+.t2{
+     background-color: rgb(250, 247, 246);
+     color: blue;
+     font-size: 16px;
+}
+.t4{
+     background-color: rgb(12, 137, 12);
+     color: white;
+     font-size: 16px;
+}
+@media(min-width:600px){
+    .logincontains{
+    width: 400px;
+}
+}

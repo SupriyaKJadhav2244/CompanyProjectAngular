@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Venders | Profile</title>
+    <!-- BOOTSTRAP STYLES-->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css"> -->
+
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Admin Profile</a> 
+            </div>
+              <div style="color: white;
+            padding: 15px 50px 5px 50px;
+            float: right;
+            font-size: 16px;">{{sessinEmail}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-danger square-btn-adjust" (click)="logout()">Logout</a> </div>
+        </nav>   
+           <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li class="text-center">
+                        <img src="assets/assets/img/find_user.png" class="user-image img-responsive"/>
+                    </li>
+                    <li><a [routerLink]="['/admin-home-pge']">Home Page</a></li> 
+                    <li><a [routerLink]="['/admin-profile-page']">Admin Profile</a></li>  
+                       <!-- <ul class="nav nav-second-level">
+                            <li><a >Display Students Data</a></li>
+                        </ul>--> 
+                    <li><a [routerLink]="['/display-students-profile']">Display Students List</a></li>  
+                    <!-- <li><a >Display Students Data</a></li>   -->
+<!--                    <li><a  href="property_imagea.php">Home Slider Image</a></li>	--> 
+                    <li><a class="active-menu">Create Company Profile</a></li>
+                    <li><a [routerLink]="['/display-company-profile']">Display Company's Profile</a></li>
+                </ul>
+            </div>
+        </nav>  
+        <!-- /. NAV SIDE  --> 
+            <div id="page-wrapper" >
+                    <div id="page-inner">
+                        <div class="row">
+                            <div class="col-md-12 maindiv">
+                                <h2 class="testAlignCenter">
+                                   Create Company Profile
+                                </h2>   
+                                <div class="container col col-sm-12">
+                                    <form #companyForm="ngForm" method="post" (ngSubmit)="updateCompanyData()"> 
+                                        <div class="row col-md-12 form-group">
+                                            <label class="text-left">Company Name</label>
+                                            <input type="text" name="company" #Name="ngModel" [(ngModel)]="updateCompany.company" class="form-control col-md-8" required>
+                                            <div class="inputText" *ngIf="Name.invalid && Name.touched">
+                                                <small class="text-danger">Enter Your Company Name</small> 
+                                            </div>
+                                        </div> 
+                                        <div class="row col-md-12 form-group">
+                                            <label class="text-left">SSC Marks</label>
+                                            <input type="text" name="sscMarks" #ssc="ngModel" [(ngModel)]="updateCompany.sscMarks" [(ngModel)]="updateCompany.sscMarks" class="form-control col-md-8" required>
+                                            <div class="inputText" *ngIf="ssc.invalid && ssc.touched">
+                                                <small class="text-danger">Enter Required SSC Marks</small> 
+                                            </div>
+                                        </div>
+                                        <div class="row col-md-12 form-group">
+                                            <label class="text-left">HSC Marks Required</label>
+                                            <input type="text" name="hsccMarks" #hsc="ngModel" [(ngModel)]="updateCompany.hsccMarks" [(ngModel)]="updateCompany.hsccMarks" class="form-control col-md-8" required>
+                                            <div class="inputText" *ngIf="hsc.invalid && hsc.touched">
+                                                <small class="text-danger">Enter Required HSC Marks</small> 
+                                            </div>
+                                        </div>
+                                        <div class="row col-md-12 form-group">
+                                            <label class="text-left">Diploma Marks Required</label>
+                                            <input type="text" name="diploma" #poly="ngModel" [(ngModel)]="updateCompany.diploma" [(ngModel)]="updateCompany.diploma" class="form-control col-md-8" required>
+                                            <div class="inputText" *ngIf="poly.invalid && poly.touched">
+                                                <small class="text-danger">Enter Required Diploma Marks</small> 
+                                            </div>
+                                        </div>
+                                        <div class="row col-md-12 form-group">
+                                            <label class="text-left">Engineering Marks Required</label>
+                                            <input type="text" name="engineering" #eng="ngModel" [(ngModel)]="updateCompany.engineering" [(ngModel)]="updateCompany.engineering" class="form-control col-md-8" required>
+                                            <div class="inputText" *ngIf="eng.invalid && eng.touched">
+                                                <small class="text-danger">Enter Required Engineering Marks</small> 
+                                            </div>
+                                        </div>
+                                        <div class="row col-md-12 form-group">
+                                            <label class="text-left">Technology Required</label>
+                                            <input type="text" name="technology" #techno="ngModel" [(ngModel)]="updateCompany.technology" [(ngModel)]="updateCompany.technology" class="form-control col-md-8" required>
+                                            <div class="inputText" *ngIf="techno.invalid && techno.touched">
+                                                <small class="text-danger">Enter Required Technology</small> 
+                                            </div>
+                                        </div>
+                                        <div class="row col-md-12 form-group">
+                                            <label class="text-left">Minimum Year Gap</label>
+                                            <input type="text" name="gap" #yd="ngModel" [(ngModel)]="updateCompany.gap" [(ngModel)]="updateCompany.gap" class="form-control col-md-8" required>
+                                            <div class="inputText" *ngIf="yd.invalid && yd.touched">
+                                                <small class="text-danger">This Feild Is Required</small> 
+                                            </div>
+                                        </div>
+                                        <div class="row col-md-12 form-group">
+                                            <label class="text-left">Company Detail</label>
+                                            <textarea type="text" name="detail" #companyDetail="ngModel" [(ngModel)]="updateCompany.detail" [(ngModel)]="updateCompany.detail" class="form-control col-md-8" required></textarea>
+                                            <div class="inputText" *ngIf="companyDetail.invalid && companyDetail.touched">
+                                                <small class="text-danger">Enter Company Detail</small> 
+                                            </div>
+                                       </div>
+                                       <div class="text-center">
+                                           <input type="submit" class="col-md-2 " name="submit" class="btn btn-success" id="submitButton" [disabled]="!companyForm.valid" value="Submit">
+                                       </div>
+                                    </form>
+                                </div>  
+                            </div>
+                        </div> 
+                    </div>
+            </div>
+        </div> 
+</body>
+</html>

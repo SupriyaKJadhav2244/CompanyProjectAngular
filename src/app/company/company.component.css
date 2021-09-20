@@ -1,0 +1,21 @@
+#submitButton{
+    /* margin-left: 450px; */
+    margin-bottom: 20px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+}
+#submitButton:hover{
+    /* margin-left: 450px; */
+    margin-bottom: 20px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    background-color: red;
+}
+.testAlignCenter{
+    text-align: center;
+    color: red;
+    font-size: 30px;
+    margin: 20px auto;
+} 

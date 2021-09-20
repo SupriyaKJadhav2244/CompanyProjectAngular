@@ -1,0 +1,63 @@
+ 
+<div class="container mainBox">
+    <h3>Students Registration Form</h3>
+  </div>
+  <div class="container formBox">
+    <!-- {{studentInf | json}} -->
+    <form #regiForm="ngForm"  method="post" (ngSubmit)="onSubmit()" >
+      <div class="form-group">
+        <label> Full Name:  </label>
+        <input type="text" name="Fname" #Name="ngModel" [(ngModel)]="studentData.Fname" placeholder="Enter Full Name" class="form-control" required>
+        <div *ngIf="Name.invalid && Name.touched">
+          <small class="text-danger">Enter Your Full Name</small> 
+      </div>
+      </div>
+      <div class="form-group">
+        <label> E Mail:  </label>
+        <input type="email" name="email" #emailId="ngModel" [class.is-invalid]="emailId.invalid && emailId.touched" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" [(ngModel)]="studentData.email" placeholder="Enter E-Mail Id" class="form-control" required>
+        <div *ngIf="emailId.errors && (emailId.invalid && emailId.touched)">
+          <small class="text-danger" *ngIf="emailId.errors.required">Enter Your Email Id</small>
+          <small class="text-danger" *ngIf="emailId.errors.pattern">Enter Your Valid Email Id</small>
+      </div>
+      </div>
+      <div class="form-group">
+        <label> Contact Number:  </label>
+        <input type="phone" name="cmobile" #mobile="ngModel" [(ngModel)]="studentData.cmobile" placeholder="Enter Contact Number" class="form-control" required>
+        <div *ngIf="mobile.invalid && mobile.touched">
+          <small class="text-danger">Enter Your Contact Number</small> 
+        </div>
+      </div>
+      <div class="form-group">
+        <label> Gender:  </label>
+        <input type="radio" name="gender" #gender="ngModel" [(ngModel)]="studentData.gender" value="male" required>Male
+        <input type="radio" name="gender" #gender="ngModel" [(ngModel)]="studentData.gender" value="female" required>Female
+        <div *ngIf="gender.invalid && gender.touched">
+          <small class="text-danger">Enter Your Gender</small> 
+        </div> 
+      </div> 
+      <div class="form-group">
+        <label> City:  </label>
+        <input type="text" name="city" #city="ngModel" [(ngModel)]="studentData.city" placeholder="Enter City" class="form-control" required>
+        <div *ngIf="city.invalid && city.touched">
+          <small class="text-danger">Enter Your City</small> 
+        </div> 
+      </div>
+      <div class="form-group">
+        <label> Pin Code:  </label>
+        <input type="text" name="pin" #pin="ngModel" [(ngModel)]="studentData.pin" placeholder="Enter Pin Code" class="form-control" required>
+        <div *ngIf="pin.invalid && pin.touched">
+          <small class="text-danger">Enter Your City Pin Number</small> 
+        </div> 
+      </div>
+      <div class="form-group">
+        <label> State:  </label>
+        <input type="text" name="state" #state="ngModel" [(ngModel)]="studentData.state" placeholder="Enter State" class="form-control" required>
+        <div *ngIf="state.invalid && state.touched">
+          <small class="text-danger">Enter Your State</small> 
+        </div> 
+      </div> 
+      <div>
+        <input type="submit"  class="btn btn-success" id="sbutton" value="Submit" [disabled]="!regiForm.valid"> 
+      </div> 
+    </form>
+  </div>   

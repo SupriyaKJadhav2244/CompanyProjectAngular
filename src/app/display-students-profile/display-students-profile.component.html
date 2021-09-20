@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Venders | Profile</title>
+    <!-- BOOTSTRAP STYLES-->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css"> -->
+
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Admin Profile</a> 
+            </div>
+              <div style="color: white; 
+            padding: 15px 50px 5px 50px;
+            float: right; 
+            font-size: 16px;">{{sessinEmail}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-danger square-btn-adjust" (click)="logout()">Logout</a> </div>
+        </nav>   
+           <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">  
+                    <li class="text-center">
+                        <img src="assets/assets/img/find_user.png" class="user-image img-responsive"/>
+                    </li>
+                    <li><a [routerLink]="['/admin-home-pge']">Home Page</a></li> 
+                    <li><a [routerLink]="['/admin-profile-page']">Admin Profile</a></li>  
+                       <!-- <ul class="nav nav-second-level">
+                            <li><a >Display Students Data</a></li>
+                        </ul>--> 
+                    <li><a class="active-menu">Display Students List</a></li>  
+                    <!-- <li><a >Display Students Data</a></li>   -->
+<!--                    <li><a  href="property_imagea.php">Home Slider Image</a></li>	--> 
+                    <li><a [routerLink]="['/update-company-profile']">Create Company Profile</a></li>
+                    <li><a [routerLink]="['/display-company-profile']">Display Company's Profile</a></li>
+                </ul>
+            </div>
+        </nav>  
+        <!-- /. NAV SIDE  --> 
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="titleHeading">Display Students Profile</div>
+               <form>
+                   <div class="table-responsive">
+                       <table class="table table-bordered mainTable">
+                           <thead class="thead-dark">
+                               <tr>
+                                   <th>Student Id</th>
+                                   <th>Student Name</th>
+                                   <th>Email</th>
+                                   <th>Contact</th>
+                                   <th>Gender</th>
+                                   <th>City</th>
+                                   <th>Pincode</th>
+                                   <th>State</th> 
+                                   <th>Applied Company Name</th>
+                                   <th>SSC Marks</th>
+                                   <th>HSC Marks</th>
+                                   <th>Diploma Marks</th>
+                                   <th>Engineering Marks</th> 
+                                   <th>Year Gap</th>
+                                   <th>Technology</th>
+                                   <th>ProjectDetails</th>
+                                   <th>Resume</th>
+                                   <!-- <th colspan="2">Operations</th>  -->
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr *ngFor="let student of students">
+                                   <td>{{student.StudentId}}</td>
+                                   <td>{{student.StudentName | titlecase}}</td>
+                                   <td>{{student.EmailId}}</td>
+                                   <td>{{student.Contact}}</td>
+                                   <td>{{student.Gender}}</td>
+                                   <td>{{student.City}}</td>
+                                   <td>{{student.Pincode}}</td>
+                                   <td>{{student.State}}</td> 
+                                   <td>{{student.CompanyName}}</td>
+                                   <td>{{student.SSCObtainedMark}}</td>
+                                   <td>{{student.HSCObtainedMark}}</td>
+                                   <td>{{student.DiplomaObtainedMarks}}</td> 
+                                   <td>{{student.EngineeringObtainedMarks}}</td>
+                                   <td>{{student.YearDrop}}</td> 
+                                   <td>{{student.Technology}}</td> 
+                                   <td>{{student.ProjectDetails}}</td> 
+                                   <td>{{student.Resume}}</td>  
+                                   <!-- <td><a class="btn btn-primary" [routerLink]="['./student-admin-profile', student.Id]">Edit</a></td>  -->
+                                   <!-- <td><a class="btn btn-danger" (click)="delete(student.Id)">Delete</a></td> -->
+                               </tr>
+                           </tbody>
+                       </table>
+                   </div>
+               </form>         
+            </div>
+        </div> 
+    </div> 
+</body>
+</html>

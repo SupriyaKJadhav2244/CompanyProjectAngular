@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+
+@media (min-width: 250) { html {font-size:0.9rem;} } 
+@media (min-width: 640px) { html {font-size:0.9rem;} } 
+@media (min-width:768px) { html {font-size:0.9rem;} } 
+@media (min-width:992px) { html {font-size:0.9rem;} } 
+@media (min-width:1200px) { html {font-size:0.9rem;} } 
+@media (min-width:1400px) { html {font-size:0.9rem;} } 

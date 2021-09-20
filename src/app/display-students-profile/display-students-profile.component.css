@@ -1,0 +1,19 @@
+.titleHeading{
+    text-align: center;
+    font-size: 30px;
+    color: red;
+    margin: 20px auto;
+}
+.mainTable{
+    width: 800px;
+    text-align: center;
+}
+#page-inner{
+    width: 1350px; 
+}
+#page-wrapper{
+    width: 1350px; 
+}
+#wrapper{
+    width: 1610px; 
+}

@@ -1,0 +1,95 @@
+*{
+/*    border:1px solid pink;*/
+}
+.im{
+/*    background: url("777.jpg") no-repeat;*/
+/*    width: 400px;*/
+     background-size:cover;
+    color: black;
+}
+.logincontains{
+/*    padding: 0px 5px;*/
+    margin: 60px 0 60px 0;
+    text-align: center;
+    width: 320px;
+    height: 450px;
+    box-shadow: 2px 3px 5px #13a200;
+    background-size: cover;
+}
+.containerdiv{
+    margin: 0px auto;
+    padding: 0px;
+}
+.logincontains h3{
+    padding: 15px 0px 0px 0px;
+    color: #fc1d00;
+}   
+.TextData{
+        margin: 70px 0 0 15px;
+    height: 350px;
+        color: rgba(36, 36, 36, 0.79);
+}
+.textmess{
+    text-align: center;
+    margin: 25px 0 0 0;
+}
+.thank{
+    margin: 120px 0 0 0;
+    float: right;
+}
+.text{
+    margin: 25px auto;
+    background-color: rgba(219, 149, 149, 0.5);
+    border:0px; 
+    font-size: 14px;
+}
+/*
+.text:focus{
+    background-color: rgba(224, 119, 119, 0.5);
+    font-size: 14px;
+}
+*/
+.t1{
+     background-color: rgba(240, 69, 17, 0.96);
+     color: white;
+     font-size: 16px;
+}
+.t1:focus{
+     background-color: rgba(240, 69, 17, 0.96);
+     color: white;
+     font-size: 16px;
+}
+.t2,.t3{
+     background-color: rgba(240, 69, 17, 0.96);
+/*     color: blue;*/ color: white;
+     font-size: 16px;
+}
+.t4{
+     background-color:  rgba(240, 69, 17, 0.96);
+     color: white;
+     font-size: 16px;
+}
+.button{
+     margin: 25px auto;
+     background-color: transparent;
+    background-color: rgba(217, 173, 173, 0.5);
+     border:0px; 
+}
+.button:hover{
+    background-color: rgb(253, 43, 4);
+    color: white;
+}
+/*
+.name{
+    padding: 0px 10px;
+    margin: 20px auto 0;
+    text-align: center;
+    width: 480px;
+    height: 200px;
+}
+*/
+@media(min-width:600px){
+    .logincontains{
+    width: 450px;
+}
+}

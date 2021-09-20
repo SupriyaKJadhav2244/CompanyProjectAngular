@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Venders | Profile</title>
+    <!-- BOOTSTRAP STYLES-->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css"> -->
+
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Admin Profile</a> 
+            </div>
+              <div style="color: white;
+            padding: 15px 50px 5px 50px;
+            float: right;
+            font-size: 16px;">{{sessinEmail}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-danger square-btn-adjust" (click)="logout()">Logout</a> </div>
+        </nav>   
+           <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li class="text-center">
+                        <img src="assets/assets/img/find_user.png" class="user-image img-responsive"/>
+                    </li>
+                    <li><a [routerLink]="['/admin-home-pge']">Home Page</a></li> 
+                    <li><a [routerLink]="['/admin-profile-page']">Admin Profile</a></li>  
+                       <!-- <ul class="nav nav-second-level">
+                            <li><a >Display Students Data</a></li>
+                        </ul>--> 
+                    <li><a [routerLink]="['/display-students-profile']">Display Students List</a></li>  
+                    <!-- <li><a >Display Students Data</a></li>   -->
+<!--                    <li><a  href="property_imagea.php">Home Slider Image</a></li>	--> 
+                    <li><a [routerLink]="['/update-company-profile']">Update Company Profile</a></li>
+                    <li><a class="active-menu">Display Company Profile</a></li>
+                </ul>
+            </div>
+        </nav>  
+        <!-- /. NAV SIDE  --> 
+            <div id="page-wrapper" >
+                    <div id="page-inner">
+                        <div class="row">
+                            <div class="col-md-12 maindiv">
+                                <h2 class="testAlignCenter">
+                                   Update Company Profile
+                                </h2>   
+                                <div class="container col col-sm-12 maindiv"> 
+                                    <form #companyForm="ngForm" (ngSubmit)="updateCmpanyProfile()">
+                                        <div class="form-group"> 
+                                            <label class="inputText">Company Name</label>
+                                            <input type="text" name="company" [(ngModel)]="studentDatas.company" class="form-control inputFeild" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="inputText">SSC Marks</label>
+                                            <input type="text" name="sscMarks" [(ngModel)]="studentDatas.sscMarks" class="form-control inputFeild" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="inputText">HSC Marks Required</label>
+                                            <input type="text" name="hsccMarks" [(ngModel)]="studentDatas.hsccMarks" class="form-control inputFeild" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="inputText">Diploma Marks Required</label>
+                                            <input type="text" name="diploma" [(ngModel)]="studentDatas.diploma" class="form-control inputFeild" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="inputText">Engineering Marks Required</label>
+                                            <input type="text" name="engineering" [(ngModel)]="studentDatas.engineering" class="form-control inputFeild" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="inputText">Technology Required</label>
+                                            <input type="text" name="technology" [(ngModel)]="studentDatas.technology" class="form-control inputFeild" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="inputText">Minimum Year Gap</label>
+                                            <input type="text" name="gap" [(ngModel)]="studentDatas.gap" class="form-control inputFeild" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="inputText">Company Detail</label>
+                                            <textarea type="text" name="detail" [(ngModel)]="studentDatas.detail" class="form-control inputFeild" required></textarea>
+                                       </div>
+                                       <div class="text-center">
+                                           <input type="submit" name="submit" class="btn btn-success" id="submitButton" value="Submit">
+                                       </div>
+                                    </form>
+                                </div>    
+                            </div>
+                        </div> 
+                    </div>
+            </div>
+        </div> 
+</body>
+</html>

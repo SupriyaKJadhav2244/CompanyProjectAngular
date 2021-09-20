@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Venders | Profile</title>
+    <!-- BOOTSTRAP STYLES-->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css"> -->
+
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Admin Profile</a> 
+            </div>
+              <div style="color: white; 
+            padding: 15px 50px 5px 50px;
+            float: right;
+            font-size: 16px;">{{sessinEmail}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-danger square-btn-adjust" (click)='logout()'>Logout</a> </div>
+        </nav>   
+           <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li class="text-center">
+                        <img src="assets/assets/img/find_user.png" class="user-image img-responsive"/>
+                    </li>
+                    <li><a [routerLink]="['/admin-home-pge']">Home Page</a></li> 
+                    <li><a [routerLink]="['/admin-profile-page']">Admin Profile</a></li>  
+                       <!-- <ul class="nav nav-second-level">
+                            <li><a >Display Students Data</a></li>
+                        </ul>--> 
+                    <li><a class="active-menu">Display Students List</a></li>  
+                    <!-- <li><a >Display Students Data</a></li>   -->
+<!--                    <li><a  href="property_imagea.php">Home Slider Image</a></li>	--> 
+                    <li><a [routerLink]="['/update-company-profile']">Update Company Profile</a></li>
+                    <li><a [routerLink]="['/display-company-profile']">Display Company Profile</a></li>
+                </ul>
+            </div>
+        </nav>  
+        <!-- /. NAV SIDE  --> 
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="titleHeading">Update Students Profile</div>
+                <form #updateData="ngForm" (ngSubmit)="updateAdminStudentData()" method="post">  
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 field">
+                                <label>Students Id</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control inputFeild" name="Id" [(ngModel)]="studentData.Id" readonly>
+                            </div>      
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 field">
+                                <label>Full Name</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control inputFeild" name="FullName" [(ngModel)]="studentData.FullName" required>
+                            </div>      
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 field">
+                                <label>Email Id</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="email" class="form-control inputFeild" name="Email" [(ngModel)]="studentData.Email" readonly>
+                            </div>      
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 field">
+                                <label>Contact</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control inputFeild" name="Contact" [(ngModel)]="studentData.Contact" required>
+                            </div>      
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 field">
+                                <label>Gender</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="radio" name="Gender" [(ngModel)]="studentData.Gender" value="male" required> Male&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="Gender" [(ngModel)]="studentData.Gender" value="female" required> Female
+                            </div>      
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 field">
+                                <label>City</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control inputFeild" name="City" [(ngModel)]="studentData.City" required>
+                            </div>      
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 field">
+                                <label>Pin Code</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control inputFeild" name="PinCode" [(ngModel)]="studentData.PinCode" required>
+                            </div>      
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 field">
+                                <label>State</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control inputFeild" name="State" [(ngModel)]="studentData.State" required> 
+                            </div>      
+                        </div> 
+                    </div> 
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 field">
+                                <label>SSC Marks</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control inputFeild" name="sscMarks" [(ngModel)]="studentData.sscMarks" required> 
+                            </div>      
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 field">
+                                <label>HSC Marks</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control inputFeild" name="hscMarks" [(ngModel)]="studentData.hscMarks" required>
+                            </div>      
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 field">
+                                <label>Diploma Marks</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control inputFeild" name="PolyMarks" [(ngModel)]="studentData.PolyMarks" required>
+                            </div>      
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 field">
+                                <label>Engineering Marks</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control inputFeild" name="EngineeringMarks" [(ngModel)]="studentData.EngineeringMarks
+                                " required>
+                            </div>      
+                        </div> 
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 field">
+                                <label>Project Details</label>
+                            </div>
+                            <div class="col-md-9">
+                                <textarea type="text" class="form-control inputFeild" name="ProjectDetails" [(ngModel)]="studentData.ProjectDetails" required></textarea>
+                            </div>      
+                        </div> 
+                    </div>
+                    <div>
+                        <input type="submit" class="btn btn-primary" id="Sbutton" value="Update">
+                    </div>
+                </form> 
+            </div>
+        </div> 
+    </div> 
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+.mainBox{
+    text-align: center;
+    color: white;
+    background-color: darkblue;
+    width: 500px;
+    height: 70px;
+    margin: 10px auto;
+    padding: 5px;
+    box-shadow: 3px 8px 8px 1px gray;
+}
+.formBox{
+    border: 1px solid black;
+    width: 500px;
+    padding-top:  20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;  
+    box-shadow: 3px 8px 8px 3px gray;
+}
+label{
+    padding: 10px;
+}
+#sbutton{
+    margin-top: 10px;
+    margin-left: 200px;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+}
+#sbutton:hover{
+    margin-top: 10px;
+    margin-left: 200px;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    background-color: red;
+}
+.fileup{
+    margin-top: 20px;
+}
+.selectBox{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+input.ng-invalid.ng-touched{
+    border-color: red;
+}

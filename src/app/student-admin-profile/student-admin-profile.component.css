@@ -1,0 +1,31 @@
+.titleHeading{
+    text-align: center;
+    color: red;
+    font-size: 30px;
+    margin: 20px auto;
+    margin-bottom: 30px;
+}
+.field{
+    text-align: left;  
+    padding-left: 80px; 
+}
+#Sbutton{
+    text-align: center; 
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    margin: 20px auto;
+    margin-left: 450px;
+}
+#Sbutton:hover{
+    text-align: center; 
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    margin: 20px auto;
+    margin-left: 450px;
+    background-color: red;
+}
+.inputFeild{ 
+    width: 550px;
+}

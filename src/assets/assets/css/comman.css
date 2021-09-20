@@ -1,0 +1,49 @@
+*{
+/*    border:1px solid pink;*/
+}
+.im{
+/*    background: url("777.jpg") no-repeat;*/
+/*    width: 400px;*/
+     background-size:cover;
+}
+.logincontains{
+    padding: 0px 50px;
+    margin: 60px auto;
+    text-align: center;
+    width: 500px;
+    height: 430px;
+    box-shadow: 2px 3px 5px black;
+/*    background: url("../css/aaaaa.jpg");*/
+    background-size: cover;
+}
+.logincontains h3{
+    padding: 30px 0px 0px 0px;
+}   
+
+.text{
+    margin: 25px auto;
+    background-color: rgba(255, 255, 255, 0.50);
+    border:0px; 
+    font-size: 14px;
+}
+.button{
+     margin: 25px auto;
+     background-color: transparent;
+     border:0px; 
+     padding: 10px 145px;
+    border-radius: 4px;
+}
+.button:hover{
+    background-color: #b21717;
+    color: white;
+}
+.name{
+    padding: 0px 10px;
+    margin: 20px auto 0;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+/*    box-shadow: 2px 3px 5px black;*/
+/*    background: url("../css/aaaaa.jpg");*/
+/*    background-size: cover;*/
+}
